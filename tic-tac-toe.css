@@ -3,6 +3,7 @@
 :root{
   --black: #1a202c;
   --lightGrey: #edf2f7;
+  --grey: #cbd5e0;
   --coral: #E57996;
   --lighterBlue: #32ABE1;
   --lightBlue: #3182ce;
@@ -51,16 +52,35 @@ h1 span {
   font-size: 24px;
   margin: 20px 0;
   text-align: center;
+  background: white;
+  max-width: 490px;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-top: 4px solid var(--lighterBlue);
+  border-radius: 5px;
 }
 
-.you-won {
-  color: #42B883;
+#status.you-won {
+  color: var(--green);
+  border-top: 4px solid var(--green);
   font-weight: bold;
+}
+
+#status.you-won::before {
+  content: '🎉';
+  display: inline-block;
+  margin-right: 8px;
+}
+
+#status.you-won::after {
+  content: '🎉';
+  display: inline-block;
+  margin-left: 8px;
 }
 
 .square {
   background: white;
-  border: 1px solid #cbd5e0;
+  border: 1px solid var(--grey);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   border-radius: 10px;
   width: 150px;
